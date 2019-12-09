@@ -10,7 +10,6 @@ IP_NW = "192.168.5."
 MASTER_IP_START = 10
 NODE_IP_START = 20
 LB_IP_START = 30
-DEPLOY_IP_START = 40
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
@@ -94,25 +93,6 @@ Vagrant.configure("2") do |config|
     node.vm.provision "setup-dns", type: "shell", :path => "ubuntu/update-dns.sh"
 
   end
-
-  # Provision Load Deploy Node
-  config.vm.define "deploy" do |node|
-    node.vm.provider "virtualbox" do |vb|
-        vb.name = "kubernetes-deploy"
-        vb.memory = 4096
-        vb.cpus = 2
-    end
-    node.vm.hostname = "deploy"
-    node.vm.network :private_network, ip: IP_NW + "#{DEPLOY_IP_START}"
-	node.vm.network "forwarded_port", guest: 22, host: 2740
-
-    node.vm.provision "setup-hosts", :type => "shell", :path => "ubuntu/vagrant/setup-hosts.sh" do |s|
-      s.args = ["enp0s8"]
-    end
-
-    node.vm.provision "setup-dns", type: "shell", :path => "ubuntu/update-dns.sh"
-
-  end  
 
   # Provision Worker Nodes
   (1..NUM_WORKER_NODE).each do |i|

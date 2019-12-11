@@ -27,3 +27,15 @@ Download and Install [Vagrant](https://www.vagrantup.com/) on your platform.
 - Linux
 - macOS
 - Arch Linux
+
+Install plugin for specifing VM disk size
+```
+vagrant plugin install vagrant-disksize
+```
+for example
+```
+vagrant.configure('2') do |config|
+    config.vm.box = 'ubuntu/xenial64'
+    config.disksize.size = '50GB'
+end
+```

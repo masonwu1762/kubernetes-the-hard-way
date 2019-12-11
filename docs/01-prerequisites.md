@@ -32,7 +32,8 @@ Install plugin for specifing VM disk size
 ```
 vagrant plugin install vagrant-disksize
 ```
-for example
+
+sample configuration:
 ```
 vagrant.configure('2') do |config|
     config.vm.box = 'ubuntu/xenial64'

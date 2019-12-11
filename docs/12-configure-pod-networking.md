@@ -16,19 +16,19 @@ Reference: https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage
 
 ### Deploy Weave Network
 
-Deploy weave network. Run only once on the `master` node.
+Deploy weave network. Run only once on the `deploy` node.
 
 
-`kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"`
+`deploy$kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"`
 
 Weave uses POD CIDR of `10.32.0.0/12` by default.
 
 ## Verification
 
-List the registered Kubernetes nodes from the master node:
+List the registered Kubernetes nodes from the deploy node:
 
 ```
-master-1$ kubectl get pods -n kube-system
+deploy$ kubectl get pods -n kube-system
 ```
 
 > output

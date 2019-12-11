@@ -120,7 +120,6 @@ EOF
 
 
 kubectl create -f bootstrap-token-07401b.yaml
-kubectl create -f bootstrap-token-07401b.yaml --kubeconfig admin-baseOS.kubeconfig
 
 ```
 

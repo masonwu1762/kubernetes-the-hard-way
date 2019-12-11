@@ -16,7 +16,7 @@ kubectl create secret generic kubernetes-the-hard-way \
 Print a hexdump of the `kubernetes-the-hard-way` secret stored in etcd:
 
 ```
-sudo ETCDCTL_API=3 etcdctl get \
+master-1$sudo ETCDCTL_API=3 etcdctl get \
   --endpoints=https://127.0.0.1:2379 \
   --cacert=/etc/etcd/ca.crt \
   --cert=/etc/etcd/etcd-server.crt \

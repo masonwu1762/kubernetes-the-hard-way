@@ -89,7 +89,7 @@ Bootstrap Tokens take the form of a 6 character token id followed by 16 characte
 Bootstrap Tokens are created as a secret in the kube-system namespace.
 
 ```
-cat > bootstrap-token-07401b.yaml <<EOF
+work-2$cat > bootstrap-token-07401b.yaml <<EOF
 apiVersion: v1
 kind: Secret
 metadata:

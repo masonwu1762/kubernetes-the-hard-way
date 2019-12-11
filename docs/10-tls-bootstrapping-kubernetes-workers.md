@@ -70,6 +70,7 @@ sudo mkdir -p \
 
 Install the worker binaries:
 
+on `worker-2`
 ```
 {
   chmod +x kubectl kube-proxy kubelet
@@ -78,7 +79,7 @@ Install the worker binaries:
 ```
 ### Move the ca certificate
 
-`sudo mv ca.crt /var/lib/kubernetes/`
+`worker-2$sudo mv ca.crt /var/lib/kubernetes/`
 
 # Step 1 Create the Boostrap Token to be used by Nodes(Kubelets) to invoke Certificate API
 

@@ -244,7 +244,7 @@ EOF
 List the registered Kubernetes nodes from the master node:
 
 ```
-master-1$ kubectl get nodes --kubeconfig admin.kubeconfig
+deploy$ kubectl get nodes --kubeconfig admin.kubeconfig
 ```
 
 > output

@@ -8,7 +8,7 @@ In this section you will configure RBAC permissions to allow the Kubernetes API 
 Create the `system:kube-apiserver-to-kubelet` [ClusterRole](https://kubernetes.io/docs/admin/authorization/rbac/#role-and-clusterrole) with permissions to access the Kubelet API and perform most common tasks associated with managing pods:
 
 ```
-deploy$cat <<EOF | kubectl apply --kubeconfig admin.kubeconfig -f -
+deploy$cat <<EOF | kubectl apply -f -
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRole
 metadata:

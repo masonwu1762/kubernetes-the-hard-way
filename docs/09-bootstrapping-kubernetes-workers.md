@@ -16,7 +16,7 @@ Kubernetes uses a [special-purpose authorization mode](https://kubernetes.io/doc
 
 Generate a certificate and private key for one worker node:
 
-Worker1:
+deploy node:
 
 ```
 deploy$ cat > openssl-worker-1.cnf <<EOF

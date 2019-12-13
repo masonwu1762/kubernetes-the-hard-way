@@ -6,6 +6,8 @@ In this lab you will generate [Kubernetes configuration files](https://kubernete
 
 In this section you will generate kubeconfig files for the `controller manager`, `kubelet`, `kube-proxy`, and `scheduler` clients and the `admin` user.
 
+In our case we do it on the `deploy node`.
+
 ### Kubernetes Public IP Address
 
 Each kubeconfig requires a Kubernetes API Server to connect to. To support high availability the IP address assigned to the load balancer will be used. In our case it is `192.168.5.30`

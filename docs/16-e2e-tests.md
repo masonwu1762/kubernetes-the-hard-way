@@ -14,6 +14,13 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 ```
 go get -v -u k8s.io/test-infra/kubetest
+
+-----------OR--------------------
+tmpdir=$(mktemp -d)
+trap "rm -rf ${tmpdir}" EXIT
+cd ${tmpdir} git clone --depth=1 https://github.com/kubernetes/test-infra
+cd test-infra
+GO111MODULE=on go install ./kubetest
 ```
 
 > Note: This may take a few minutes depending on your network speed

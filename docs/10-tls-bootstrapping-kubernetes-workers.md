@@ -402,7 +402,7 @@ Reference: https://kubernetes.io/docs/reference/command-line-tools-reference/kub
 List the registered Kubernetes nodes from the master node:
 
 ```
-master-1$ kubectl get nodes --kubeconfig admin.kubeconfig
+master-1$ kubectl get nodes
 ```
 
 > output
